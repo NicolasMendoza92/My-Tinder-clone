@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Readex+Pro:wght@160..700&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-style: italic;
+}
+
+* {
+  font-family: 'Readex Pro', sans-serif;
+}
+
+.primary-title {
+  font-size: 90px;
+  color: rgb(255, 255, 255);
+}
+
+.primary-button {
+  color: rgb(255,255,255);
+  text-transform: uppercase;
+  font-size: 15px;
+  background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background: linear-gradient(260deg, rgb(254, 48, 114), rgb(255, 89, 64));
+}
+
+.secondary-button {
+  color: rgb(121, 119, 119);
+  background-color: rgb(255, 255, 255);
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  border-radius: 30px;
+  border: solid 2px rgb(121, 119, 119);
+  margin: 6px;
+  cursor: pointer;
+}
+
+.secondary-button:hover {
+  color: rgb(48, 48, 48);
+  border: solid 2px rgb(48, 48, 48);
+}
+
+
+/*-------- Navbar Home --------*/
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .nav-button {
+  color: rgb(254, 48, 114);
+  background-color: rgb(255, 255, 255);
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+nav .nav-button:disabled {
+  background-color: rgb(181, 180, 180);
+  color: rgb(189, 42, 90);
+}
+
+nav .logo-container {
+  width: 170px;
+  margin: 15px;
+}
+
+nav .logo-container .logo {
+  width: 100%;
+  cursor: pointer;
+}
+
+/*-------- Navbar Tinder --------*/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fbfbfb;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+  rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.header-logo {
+  height: 40px;
+  object-fit: contain;
+}
+
+.header-icon {
+  padding: 20px;
+  font-size: 25px;
+  color:rgb(226, 115, 115);
+}
+
+/*-------- Home page --------*/
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0.65) 0%,
+          rgba(0, 0, 0, 0) 100%
+  ), url('./components/images/6e9794bcedeecf5a8f8f41338a2a7345.webp')
+}
+
+.home {
+  margin-top: 30vh;
+}
+
+/*-------- Auth Modal --------*/
+.auth-modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50px;
+  margin: auto;
+  max-width: 360px;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.auth-modal .close-icon {
+  float: right;
+  cursor: pointer;
+}
+
+.auth-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-modal input[type=password],
+.auth-modal input[type=email] {
+  padding: 8px;
+  margin: 8px;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 576px) {
+  .auth-modal {
+    margin: 10px;
+  }
+}
+
+
+
+/*-------- OnBoarding Page --------*/
+.onboarding {
+  border-top: solid 1px rgb(213, 213, 213);
+}
+
+.onboarding form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.onboarding form section {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: start;
+}
+
+.box-3{
+  flex: 0 0 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .onboarding form  {
+    flex-direction: column;
+    align-items: center;
+  }
+  .onboarding form section {
+    padding: 20px;
+    width: auto;
+    text-align: start;
+  }
+}
+
+
+.onboarding form input {
+  padding: 15px 30px;
+  margin: 10px 0;
+  font-size: 15px;
+  border: solid 2px rgb(219, 219, 219);
+  border-radius: 10px;
+}
+
+.onboarding form textarea{
+  padding: 15px 30px;
+  margin: 10px 0;
+  font-size: 15px;
+  border: solid 2px rgb(219, 219, 219);
+  border-radius: 10px;
+  max-width: fit-content;
+
+}
+
+.onboarding form label {
+  margin: 10px 0;
+}
+
+.onboarding form .multiple-input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.onboarding form .show-gender-radio{
+  display: flex;
+  gap: 10px;
+}
+
+.onboarding form input::-webkit-outer-spin-button,
+.onboarding form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.onboarding form .multiple-input-container input {
+  margin-right: 10px;
+}
+
+.onboarding form .multiple-input-container label {
+  padding: 10px;
+  border: solid 2px rgb(144, 144, 144);
+  border-radius: 10px;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+
+.onboarding form input[type=radio] {
+  display: none;
+}
+
+.onboarding form input[type=number] {
+  width: 10%;
+}
+
+.onboarding form input[type=radio]:checked + label {
+  border: solid 2px rgb(221, 39, 22);
+}
+
+.btn-create-acc {
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 15px;
+  border: solid 2px rgb(219, 219, 219);
+  border-radius: 10px;
+}
+
+.btn-create-acc:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+.btn-create-acc:active {
+  background-color: rgb(226, 115, 115);
+}
+
+.onboarding form .photo-container img {
+  display: inline-flex;
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px){
+  .onboarding form .photo-container img {
+    display: inline-flex;
+    max-width: 500px;
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .onboarding form .multiple-input-container {
+   display: flex;
+   flex-direction: column;
+  }
+  .onboarding form .multiple-input-container input {
+    margin-right: 0px;
+    padding: 5px 50px;
+  }
+  .onboarding form input[type=number] {
+    width: auto;
+  }
+}
+
+/*-------- Dashboard  --------*/
+.dashboard {
+  display: flex;
+}
+
+.swiper-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.chat-container {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+  rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  text-align: left;
+  height: 100vh;
+}
+
+.swipe {
+  position: absolute;
+}
+
+.card-container {
+  display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.card {
+  position: relative;
+    width: 600px;
+    padding: 20px;
+    max-width: 85vw;
+    height: 50vh;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 20px 25px 0 rgba(0, 0, 0, 0.356);
+}
+
+.card-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  position: absolute;
+  bottom: 10px;
+  color: white;
+}
+
+.age {
+  background-color: azure;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: medium;
+  color: rgb(124, 124, 236);
+} 
+
+.swipe-info {
+  font-weight: bold;
+  position: fixed;
+  bottom: 20vh;
+  padding: 10px;
+}
+
+.btns-swipe {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  position: fixed;
+  bottom: 10vh;
+}
+
+.btn-swipe-like {
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 1vw !important;
+  color: rgb(82,165,82) !important;
+}
+
+.btn-swipe-next {
+  border-radius: 20px;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 1vw !important;
+  color: rgb(214, 76, 57) !important;
+}
+
+
+/*-------- Chat Container --------*/
+.chat-container-header {
+  background: linear-gradient(45deg, rgb(254, 48, 114), rgb(255, 89, 64));
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapp-profile-btns {
+  display: flex;
+}
+
+ .option {
+  border: none;
+  background-color: rgb(255, 255, 255);
+  border-bottom: solid 4px rgb(243, 33, 33);
+  font-size: 20px;
+  margin: 2px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.option:disabled {
+  border-bottom: solid 4px rgb(187, 187, 187);
+}
+
+.profile{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.log-out-icon {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.img-container {
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+/*-------- Chat Display --------*/
+.chat-display{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 60vh;
+}
+.matches-display {
+  padding: 20px;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.match-card{
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+  border: 1px solid rgb(187, 187, 187) ;
+  border-radius: 1rem;
+  padding: 5px 10px;
+  margin: 10px 0px;
+}
+
+.match-card:hover{
+  cursor: pointer;
+  transition-duration: 2ms;
+  background-color: rgb(187, 187, 187);
+  border-radius: 1rem;
+  padding: 5px 10px;
+}
+
+.chat-wrapper{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid gainsboro;
+  border-width:auto;
+}
+
+.chat-display-container {
+  display: flex;
+}
+
+.chat-name-sender{
+font-weight: bold;  
+}
+.chat-img-container img{
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.info-user-chat{
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid rgb(187, 187, 187) ;
+  border-radius: 1rem;
+  padding: 5px 10px;
+  margin: 10px 5px;
+}
+
+.date-stamp {
+  margin-top: 10px;
+  font-size: smaller;
+  color: #989696;
+}
+
+
+/*-------- Chat Input --------*/
+.chat-input {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------Profile ----------- */
+
+.container_profile{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.card-profile {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  max-width: 360px;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+}
+
+.close-icon{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+
+    .card-profile {
+      top: 100px;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding: 15px;
+    }
+}
+
+
+.card-image-profile {
+  width: 100%;
+  height: 200px;
+  object-fit:contain;
+}
+
+.card-content-profile {
+  padding: 15px;
+}
+
+.card-title-profile {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.card-description-profile {
+  font-size: 1em;
+  color: #666;
+}
