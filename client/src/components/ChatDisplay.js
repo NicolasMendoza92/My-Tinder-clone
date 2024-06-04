@@ -50,6 +50,8 @@ const ChatDisplay = ({ user, clickedUser }) => {
         formattedMessage['img'] = user?.url
         formattedMessage['message'] = message.message
         formattedMessage['timestamp'] = message.timestamp
+        formattedMessage['from_userId'] = message.from_userId
+        formattedMessage['_id'] = message._id
         messages.push(formattedMessage)
     })
 
@@ -61,6 +63,7 @@ const ChatDisplay = ({ user, clickedUser }) => {
         formattedMessage['timestamp'] = message.timestamp
         messages.push(formattedMessage)
     })
+
 
     const descendingOrderMessages = messages?.sort((a, b) => a.timestamp.localeCompare(b.timestamp));
 

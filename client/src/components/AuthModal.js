@@ -23,7 +23,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
         e.preventDefault();
         try {
             if (isSignUp && (password !== confirmPassword)) {
-                setError('Password nedd to match')
+                setError('Password need to match')
                 return
             }
             // condiciono la ruta, dependiendo de lo que tenga en el estado isSignUp
@@ -37,13 +37,20 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
             if (success && isSignUp) {
                 navigate('/onboarding')
             }
-            if (success && !isSignUp) {
+            else if (success && !isSignUp) {
                 navigate('/dashboard')
+            } else{
+                setError(response.data || 'Something went wrong');
             }
             window.location.reload()
 
         } catch (error) {
-            console.log(error)
+            if (error.response && error.response.data) {
+                setError(error.response.data || 'An error occurred');
+            } else {
+                setError('An error occurred');
+            }
+           
         }
 
     };
@@ -79,7 +86,7 @@ const AuthModal = ({ setShowModal, isSignUp }) => {
                         onChange={(e) => setConfirmPassword(e.target.value)} />
                 }
                 <button className="secondary-button" type="submit">{isSignUp ? 'SIGN IN' : 'ENTER'}</button>
-                <p>{error}</p>
+                <p className="error-div">{error}</p>
             </form>
 
             <hr />

@@ -7,7 +7,7 @@ const NavTinder = () => {
 
     return (
         <div className="header">
-            <Link className='header-icon' to="/profile">
+            <Link className='header-icon' to="/onboarding">
                 <FaUser />
             </Link>
             <Link to="/">

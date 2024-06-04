@@ -178,7 +178,6 @@ const Onboarding = () => {
                                 name="show_gender"
                                 onChange={handleChange}
                                 checked={formData.show_gender}
-                                defaultChecked
                             />
                         </div>
 
